@@ -12,7 +12,6 @@
 
   <a href="#main" class="skip-link">skip to content</a>
 
-  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="container nav-inner">
       <a href="#" class="logo">nexora<span>.</span></a>
@@ -25,6 +24,7 @@
         <a href="#cards">cards</a>
         <a href="#forms">forms</a>
         <a href="#faq">faq</a>
+        <a href="#footer">footer</a>
       </nav>
       <a href="#install" class="btn btn-primary btn-small">get started</a>
     </div>
@@ -33,39 +33,51 @@
   <main id="main">
     <div class="container docs-layout">
 
-      <!-- ===== SIDEBAR ===== -->
       <aside class="docs-sidebar">
         <h4>getting started</h4>
         <a href="#install">install</a>
         <a href="#quickstart">quick start</a>
+        <a href="#examples">full examples</a>
 
         <h4>layout</h4>
         <a href="#layout">container &amp; section</a>
+        <a href="#section-heading">section heading</a>
         <a href="#grid">grid</a>
+        <a href="#divider">divider</a>
 
         <h4>components</h4>
         <a href="#nav">navbar</a>
+        <a href="#nav-extended">navbar + cta</a>
         <a href="#hero">hero</a>
         <a href="#buttons">buttons</a>
+        <a href="#badges">badges</a>
         <a href="#cards">cards</a>
+        <a href="#feature-list">feature list</a>
         <a href="#stats">stats</a>
+        <a href="#logo-strip">logo strip</a>
         <a href="#testimonials">testimonials</a>
         <a href="#forms">forms</a>
         <a href="#faq">faq</a>
         <a href="#cta">cta</a>
-        <a href="#footer">footer</a>
+
+        <h4>sidebar patterns</h4>
+        <a href="#sidebar-basic">basic sidebar</a>
+        <a href="#sidebar-docs">docs sidebar</a>
+        <a href="#sidebar-aside">content + aside</a>
+
+        <h4>footer</h4>
+        <a href="#footer">minimal footer</a>
+        <a href="#footer-columns">multi-column footer</a>
+        <a href="#footer-cta">footer with cta</a>
 
         <h4>reference</h4>
         <a href="#tokens">design tokens</a>
         <a href="#utils">utilities</a>
       </aside>
 
-      <!-- ===== CONTENT ===== -->
       <div class="docs-content">
 
-        <!-- =============================================
-             INSTALL
-             ============================================= -->
+        <!-- ============ INSTALL ============ -->
         <section class="docs-section" id="install">
           <h2>install</h2>
           <p>three ways. pick one.</p>
@@ -104,9 +116,7 @@
           </div>
         </section>
 
-        <!-- =============================================
-             QUICK START
-             ============================================= -->
+        <!-- ============ QUICKSTART ============ -->
         <section class="docs-section" id="quickstart">
           <h2>quick start</h2>
           <p>a full page in less than 30 lines.</p>
@@ -166,9 +176,147 @@
           </div>
         </section>
 
-        <!-- =============================================
-             LAYOUT
-             ============================================= -->
+        <!-- ============ FULL EXAMPLES ============ -->
+        <section class="docs-section" id="examples">
+          <h2>full examples</h2>
+          <p>a complete landing page using everything below. copy this as a starting point.</p>
+
+          <div class="code">
+            <div class="code-header">
+              <span>landing.html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;acme — software that works&lt;/title&gt;
+  &lt;link rel="stylesheet" href="./framework.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href="#main" class="skip-link"&gt;skip to content&lt;/a&gt;
+
+  &lt;header class="navbar"&gt;
+    &lt;div class="container nav-inner"&gt;
+      &lt;a href="/" class="logo"&gt;acme&lt;span&gt;.&lt;/span&gt;&lt;/a&gt;
+      &lt;button class="nav-toggle" aria-label="menu" aria-expanded="false"&gt;☰&lt;/button&gt;
+      &lt;nav class="nav-links" aria-label="main"&gt;
+        &lt;a href="#features"&gt;features&lt;/a&gt;
+        &lt;a href="#pricing"&gt;pricing&lt;/a&gt;
+        &lt;a href="#faq"&gt;faq&lt;/a&gt;
+        &lt;a href="#contact"&gt;contact&lt;/a&gt;
+      &lt;/nav&gt;
+      &lt;a href="#contact" class="btn btn-primary btn-small"&gt;get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main id="main"&gt;
+    &lt;section class="hero"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="hero-content"&gt;
+          &lt;span class="eyebrow"&gt;new · v2.0&lt;/span&gt;
+          &lt;h1&gt;software that &lt;span class="text-accent"&gt;just works&lt;/span&gt;.&lt;/h1&gt;
+          &lt;p class="lead"&gt;built for teams who don't have time for complicated tools.&lt;/p&gt;
+          &lt;div class="hero-actions"&gt;
+            &lt;a href="#" class="btn btn-primary"&gt;start free&lt;/a&gt;
+            &lt;a href="#" class="btn btn-outline"&gt;see demo&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section-sm"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="stats"&gt;
+          &lt;div&gt;
+            &lt;div class="stat-value"&gt;500+&lt;/div&gt;
+            &lt;div class="stat-label"&gt;customers&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;div class="stat-value"&gt;12&lt;/div&gt;
+            &lt;div class="stat-label"&gt;years&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;div class="stat-value"&gt;99.9%&lt;/div&gt;
+            &lt;div class="stat-label"&gt;uptime&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="features"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="section-heading center"&gt;
+          &lt;h2&gt;everything you need&lt;/h2&gt;
+          &lt;p&gt;three things that make acme different.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="grid grid-3"&gt;
+          &lt;article class="card"&gt;
+            &lt;div class="card-icon"&gt;⚡&lt;/div&gt;
+            &lt;h3&gt;fast&lt;/h3&gt;
+            &lt;p&gt;loads in under a second. everywhere.&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class="card"&gt;
+            &lt;div class="card-icon"&gt;🔒&lt;/div&gt;
+            &lt;h3&gt;secure&lt;/h3&gt;
+            &lt;p&gt;encrypted, gdpr compliant, eu hosted.&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class="card"&gt;
+            &lt;div class="card-icon"&gt;✨&lt;/div&gt;
+            &lt;h3&gt;clean&lt;/h3&gt;
+            &lt;p&gt;minimal design that stays out of your way.&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section" id="faq"&gt;
+      &lt;div class="container container-narrow"&gt;
+        &lt;div class="section-heading center"&gt;
+          &lt;h2&gt;faq&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class="faq"&gt;
+          &lt;details class="faq-item"&gt;
+            &lt;summary&gt;how long does setup take?&lt;/summary&gt;
+            &lt;p&gt;less than 5 minutes.&lt;/p&gt;
+          &lt;/details&gt;
+          &lt;details class="faq-item"&gt;
+            &lt;summary&gt;can i cancel anytime?&lt;/summary&gt;
+            &lt;p&gt;yes, monthly, no strings.&lt;/p&gt;
+          &lt;/details&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="section-sm" id="contact"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="cta"&gt;
+          &lt;h2&gt;ready?&lt;/h2&gt;
+          &lt;p&gt;start in 2 minutes. no credit card.&lt;/p&gt;
+          &lt;a href="#" class="btn btn-primary"&gt;get started&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="footer"&gt;
+    &lt;div class="container footer-inner"&gt;
+      &lt;p&gt;© 2026 acme inc.&lt;/p&gt;
+      &lt;div class="footer-links"&gt;
+        &lt;a href="#"&gt;imprint&lt;/a&gt;
+        &lt;a href="#"&gt;privacy&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+  &lt;script src="./nexora.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ LAYOUT ============ -->
         <section class="docs-section" id="layout">
           <h2>container &amp; section</h2>
           <p><code>.container</code> centers content at 1160px. <code>.section</code> adds vertical rhythm.</p>
@@ -193,13 +341,44 @@
   &lt;div class="container"&gt;
     ...
   &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="section-sm"&gt;
+  &lt;div class="container container-narrow"&gt;
+    ...
+  &lt;/div&gt;
 &lt;/section&gt;</pre>
           </div>
         </section>
 
-        <!-- =============================================
-             GRID
-             ============================================= -->
+        <!-- ============ SECTION HEADING ============ -->
+        <section class="docs-section" id="section-heading">
+          <h2>section heading</h2>
+          <p>title + subtitle. add <code>.center</code> to center.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div class="section-heading center" style="margin-bottom:0;">
+                <h2 style="font-size: var(--text-2xl);">everything you need</h2>
+                <p>three things that make us different.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div class="section-heading center"&gt;
+  &lt;h2&gt;everything you need&lt;/h2&gt;
+  &lt;p&gt;three things that make us different.&lt;/p&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ GRID ============ -->
         <section class="docs-section" id="grid">
           <h2>grid</h2>
           <p><code>.grid-2</code>, <code>.grid-3</code>, <code>.grid-4</code> — all responsive via auto-fit.</p>
@@ -228,9 +407,30 @@
           </div>
         </section>
 
-        <!-- =============================================
-             NAVBAR
-             ============================================= -->
+        <!-- ============ DIVIDER ============ -->
+        <section class="docs-section" id="divider">
+          <h2>divider</h2>
+          <p>a thin horizontal rule with vertical spacing.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <p style="margin:0;">above</p>
+              <hr class="divider">
+              <p style="margin:0;">below</p>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;hr class="divider"&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ NAVBAR ============ -->
         <section class="docs-section" id="nav">
           <h2>navbar</h2>
           <p>sticky header. <code>.nav-toggle</code> only appears on mobile. needs <code>nexora.js</code>.</p>
@@ -272,9 +472,52 @@
           </div>
         </section>
 
-        <!-- =============================================
-             HERO
-             ============================================= -->
+        <!-- ============ NAVBAR EXTENDED ============ -->
+        <section class="docs-section" id="nav-extended">
+          <h2>navbar + cta</h2>
+          <p>same nav, with a highlighted active link and a badge next to a label.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body" style="padding:0;">
+              <header class="navbar" style="position:relative;">
+                <div class="container nav-inner">
+                  <a href="#" class="logo">brand<span>.</span></a>
+                  <nav class="nav-links">
+                    <a href="#">features</a>
+                    <a href="#" class="active">pricing</a>
+                    <a href="#">blog <span class="badge">new</span></a>
+                    <a href="#">contact</a>
+                  </nav>
+                  <div class="flex gap-2 items-center">
+                    <a href="#" class="btn btn-ghost btn-small">sign in</a>
+                    <a href="#" class="btn btn-primary btn-small">get started</a>
+                  </div>
+                </div>
+              </header>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;nav class="nav-links"&gt;
+  &lt;a href="#"&gt;features&lt;/a&gt;
+  &lt;a href="#" class="active"&gt;pricing&lt;/a&gt;
+  &lt;a href="#"&gt;blog &lt;span class="badge"&gt;new&lt;/span&gt;&lt;/a&gt;
+  &lt;a href="#"&gt;contact&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class="flex gap-2 items-center"&gt;
+  &lt;a href="#" class="btn btn-ghost btn-small"&gt;sign in&lt;/a&gt;
+  &lt;a href="#" class="btn btn-primary btn-small"&gt;get started&lt;/a&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ HERO ============ -->
         <section class="docs-section" id="hero">
           <h2>hero</h2>
           <p>big title, lead paragraph, action buttons.</p>
@@ -317,9 +560,7 @@
           </div>
         </section>
 
-        <!-- =============================================
-             BUTTONS
-             ============================================= -->
+        <!-- ============ BUTTONS ============ -->
         <section class="docs-section" id="buttons">
           <h2>buttons</h2>
           <p>three variants, three sizes.</p>
@@ -337,6 +578,7 @@
                   <a href="#" class="btn btn-primary btn-small">small</a>
                   <a href="#" class="btn btn-primary">default</a>
                 </div>
+                <a href="#" class="btn btn-primary btn-block" style="max-width:280px;">block</a>
               </div>
             </div>
           </div>
@@ -355,9 +597,34 @@
           </div>
         </section>
 
-        <!-- =============================================
-             CARDS
-             ============================================= -->
+        <!-- ============ BADGES ============ -->
+        <section class="docs-section" id="badges">
+          <h2>badges</h2>
+          <p>small pills for labels, status, counts.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body centered">
+              <div class="flex gap-3 items-center">
+                <span class="badge">new</span>
+                <span class="badge">beta</span>
+                <span class="badge">v2.0</span>
+                <span class="badge">12</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;span class="badge"&gt;new&lt;/span&gt;
+&lt;span class="badge"&gt;beta&lt;/span&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ CARDS ============ -->
         <section class="docs-section" id="cards">
           <h2>cards</h2>
           <p>feature cards with optional icon.</p>
@@ -398,9 +665,40 @@
           </div>
         </section>
 
-        <!-- =============================================
-             STATS
-             ============================================= -->
+        <!-- ============ FEATURE LIST ============ -->
+        <section class="docs-section" id="feature-list">
+          <h2>feature list</h2>
+          <p>a simple check list. uses utilities only, no extra class needed.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <ul role="list" class="flex flex-col gap-3" style="list-style:none;">
+                <li class="flex gap-2 items-center"><span class="text-accent">✓</span> 14 day free trial</li>
+                <li class="flex gap-2 items-center"><span class="text-accent">✓</span> no credit card required</li>
+                <li class="flex gap-2 items-center"><span class="text-accent">✓</span> cancel anytime</li>
+                <li class="flex gap-2 items-center"><span class="text-accent">✓</span> eu hosting</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;ul role="list" class="flex flex-col gap-3" style="list-style:none;"&gt;
+  &lt;li class="flex gap-2 items-center"&gt;
+    &lt;span class="text-accent"&gt;✓&lt;/span&gt; 14 day free trial
+  &lt;/li&gt;
+  &lt;li class="flex gap-2 items-center"&gt;
+    &lt;span class="text-accent"&gt;✓&lt;/span&gt; no credit card required
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ STATS ============ -->
         <section class="docs-section" id="stats">
           <h2>stats</h2>
           <p>numbers that sell.</p>
@@ -439,9 +737,39 @@
           </div>
         </section>
 
-        <!-- =============================================
-             TESTIMONIALS
-             ============================================= -->
+        <!-- ============ LOGO STRIP ============ -->
+        <section class="docs-section" id="logo-strip">
+          <h2>logo strip</h2>
+          <p>social proof. logos in grayscale, color on hover (optional).</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <p class="text-center text-muted" style="margin-bottom: var(--space-4); font-size: var(--text-sm);">trusted by teams at</p>
+              <div class="logo-strip">
+                <div class="badge">acme</div>
+                <div class="badge">globex</div>
+                <div class="badge">initech</div>
+                <div class="badge">umbrella</div>
+                <div class="badge">hooli</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div class="logo-strip"&gt;
+  &lt;img src="acme.svg" alt="acme"&gt;
+  &lt;img src="globex.svg" alt="globex"&gt;
+  &lt;img src="initech.svg" alt="initech"&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ TESTIMONIALS ============ -->
         <section class="docs-section" id="testimonials">
           <h2>testimonials</h2>
           <p>quotes with author.</p>
@@ -492,9 +820,7 @@
           </div>
         </section>
 
-        <!-- =============================================
-             FORMS
-             ============================================= -->
+        <!-- ============ FORMS ============ -->
         <section class="docs-section" id="forms">
           <h2>forms</h2>
           <p>labels, inputs, textarea, hints. add <code>data-nexora-form</code> for visual feedback.</p>
@@ -549,9 +875,7 @@
           </div>
         </section>
 
-        <!-- =============================================
-             FAQ
-             ============================================= -->
+        <!-- ============ FAQ ============ -->
         <section class="docs-section" id="faq">
           <h2>faq</h2>
           <p>native accordion, no js needed.</p>
@@ -586,9 +910,7 @@
           </div>
         </section>
 
-        <!-- =============================================
-             CTA
-             ============================================= -->
+        <!-- ============ CTA ============ -->
         <section class="docs-section" id="cta">
           <h2>cta</h2>
           <p>the closer.</p>
@@ -617,12 +939,136 @@
           </div>
         </section>
 
-        <!-- =============================================
-             FOOTER
-             ============================================= -->
+        <!-- ============ SIDEBAR BASIC ============ -->
+        <section class="docs-section" id="sidebar-basic">
+          <h2>basic sidebar</h2>
+          <p>two-column layout with sticky sidebar. uses only grid + utilities, no extra classes.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div style="display:grid; grid-template-columns: 180px 1fr; gap: var(--space-5);">
+                <aside style="border-right: 1px solid var(--color-border); padding-right: var(--space-4);">
+                  <div class="flex flex-col gap-2" style="font-size: var(--text-sm);">
+                    <a href="#" class="text-accent">overview</a>
+                    <a href="#" class="text-muted">settings</a>
+                    <a href="#" class="text-muted">billing</a>
+                    <a href="#" class="text-muted">team</a>
+                  </div>
+                </aside>
+                <div>
+                  <h3>overview</h3>
+                  <p>main content lives here. the sidebar is just a column.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div style="display:grid; grid-template-columns: 180px 1fr; gap: var(--space-5);"&gt;
+  &lt;aside style="border-right: 1px solid var(--color-border); padding-right: var(--space-4);"&gt;
+    &lt;div class="flex flex-col gap-2" style="font-size: var(--text-sm);"&gt;
+      &lt;a href="#" class="text-accent"&gt;overview&lt;/a&gt;
+      &lt;a href="#" class="text-muted"&gt;settings&lt;/a&gt;
+      &lt;a href="#" class="text-muted"&gt;billing&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+  &lt;div&gt;
+    &lt;h3&gt;overview&lt;/h3&gt;
+    &lt;p&gt;main content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ SIDEBAR DOCS ============ -->
+        <section class="docs-section" id="sidebar-docs">
+          <h2>docs sidebar</h2>
+          <p>the one you're looking at. sticky, with section groups and active state.</p>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html + css</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div style="display:grid; grid-template-columns: 240px 1fr; gap: var(--space-8);"&gt;
+
+  &lt;aside style="position:sticky; top: calc(var(--nav-height) + var(--space-4)); align-self:start;"&gt;
+    &lt;h4 style="font-size: var(--text-xs); text-transform: uppercase; color: var(--color-muted); margin-bottom: var(--space-3);"&gt;getting started&lt;/h4&gt;
+    &lt;a href="#" style="display:block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--color-muted);"&gt;install&lt;/a&gt;
+    &lt;a href="#" style="display:block; padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); color: var(--color-primary); background: var(--color-surface);"&gt;quick start&lt;/a&gt;
+  &lt;/aside&gt;
+
+  &lt;div&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ SIDEBAR ASIDE ============ -->
+        <section class="docs-section" id="sidebar-aside">
+          <h2>content + aside</h2>
+          <p>article with a right-hand info box. typical for blog posts or docs.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div style="display:grid; grid-template-columns: 1fr 240px; gap: var(--space-6);">
+                <article>
+                  <h3>how we built it</h3>
+                  <p>long-form content goes here. the aside holds metadata.</p>
+                </article>
+                <aside class="card" style="padding: var(--space-5);">
+                  <div class="flex flex-col gap-3" style="font-size: var(--text-sm);">
+                    <div>
+                      <div class="text-muted" style="font-size: var(--text-xs);">author</div>
+                      <div>jane doe</div>
+                    </div>
+                    <div>
+                      <div class="text-muted" style="font-size: var(--text-xs);">published</div>
+                      <div>2026-05-12</div>
+                    </div>
+                    <div>
+                      <div class="text-muted" style="font-size: var(--text-xs);">read time</div>
+                      <div>4 min</div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div style="display:grid; grid-template-columns: 1fr 240px; gap: var(--space-6);"&gt;
+  &lt;article&gt;
+    &lt;h3&gt;how we built it&lt;/h3&gt;
+    &lt;p&gt;long-form content.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;aside class="card" style="padding: var(--space-5);"&gt;
+    &lt;div class="flex flex-col gap-3" style="font-size: var(--text-sm);"&gt;
+      &lt;div&gt;
+        &lt;div class="text-muted" style="font-size: var(--text-xs);"&gt;author&lt;/div&gt;
+        &lt;div&gt;jane doe&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ FOOTER MINIMAL ============ -->
         <section class="docs-section" id="footer">
-          <h2>footer</h2>
-          <p>simple, single-row footer.</p>
+          <h2>minimal footer</h2>
+          <p>single row. copyright + a couple links.</p>
 
           <div class="preview">
             <div class="preview-header"><span>preview</span></div>
@@ -656,9 +1102,176 @@
           </div>
         </section>
 
-        <!-- =============================================
-             TOKENS
-             ============================================= -->
+        <!-- ============ FOOTER COLUMNS ============ -->
+        <section class="docs-section" id="footer-columns">
+          <h2>multi-column footer</h2>
+          <p>the classic: brand column + product / company / legal columns + bottom bar.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body" style="padding:0;">
+              <footer class="footer" style="border-top:0;">
+                <div class="container">
+                  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: var(--space-6);">
+
+                    <div>
+                      <a href="#" class="logo">brand<span>.</span></a>
+                      <p style="margin-top: var(--space-3); font-size: var(--text-sm);">minimal software for modern teams.</p>
+                    </div>
+
+                    <div>
+                      <h4 style="font-size: var(--text-sm); margin-bottom: var(--space-3);">product</h4>
+                      <ul role="list" class="flex flex-col gap-2" style="font-size: var(--text-sm); color: var(--color-muted); list-style:none;">
+                        <li><a href="#">features</a></li>
+                        <li><a href="#">pricing</a></li>
+                        <li><a href="#">changelog</a></li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 style="font-size: var(--text-sm); margin-bottom: var(--space-3);">company</h4>
+                      <ul role="list" class="flex flex-col gap-2" style="font-size: var(--text-sm); color: var(--color-muted); list-style:none;">
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">careers</a></li>
+                        <li><a href="#">blog</a></li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 style="font-size: var(--text-sm); margin-bottom: var(--space-3);">legal</h4>
+                      <ul role="list" class="flex flex-col gap-2" style="font-size: var(--text-sm); color: var(--color-muted); list-style:none;">
+                        <li><a href="#">imprint</a></li>
+                        <li><a href="#">privacy</a></li>
+                        <li><a href="#">terms</a></li>
+                      </ul>
+                    </div>
+
+                  </div>
+
+                  <div class="footer-inner" style="border-top: 1px solid var(--color-border); padding-top: var(--space-4);">
+                    <p style="font-size: var(--text-sm); margin:0;">© 2026 brand inc.</p>
+                    <div class="footer-links">
+                      <a href="#">github</a>
+                      <a href="#">linkedin</a>
+                      <a href="#">x</a>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;footer class="footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: var(--space-6);"&gt;
+
+      &lt;div&gt;
+        &lt;a href="#" class="logo"&gt;brand&lt;span&gt;.&lt;/span&gt;&lt;/a&gt;
+        &lt;p style="margin-top: var(--space-3); font-size: var(--text-sm);"&gt;
+          minimal software for modern teams.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;h4 style="font-size: var(--text-sm); margin-bottom: var(--space-3);"&gt;product&lt;/h4&gt;
+        &lt;ul role="list" class="flex flex-col gap-2" style="font-size: var(--text-sm); color: var(--color-muted); list-style:none;"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;features&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;pricing&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;h4 style="font-size: var(--text-sm); margin-bottom: var(--space-3);"&gt;company&lt;/h4&gt;
+        &lt;ul role="list" class="flex flex-col gap-2" style="font-size: var(--text-sm); color: var(--color-muted); list-style:none;"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;about&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;careers&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;h4 style="font-size: var(--text-sm); margin-bottom: var(--space-3);"&gt;legal&lt;/h4&gt;
+        &lt;ul role="list" class="flex flex-col gap-2" style="font-size: var(--text-sm); color: var(--color-muted); list-style:none;"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;imprint&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;privacy&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="footer-inner" style="border-top: 1px solid var(--color-border); padding-top: var(--space-4);"&gt;
+      &lt;p style="font-size: var(--text-sm); margin:0;"&gt;© 2026 brand inc.&lt;/p&gt;
+      &lt;div class="footer-links"&gt;
+        &lt;a href="#"&gt;github&lt;/a&gt;
+        &lt;a href="#"&gt;linkedin&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ FOOTER CTA ============ -->
+        <section class="docs-section" id="footer-cta">
+          <h2>footer with cta</h2>
+          <p>a CTA band above the standard multi-column footer. converts the last scroll.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body" style="padding:0;">
+              <footer style="border-top:0;">
+                <div class="container">
+                  <div class="cta" style="margin-bottom: var(--space-7);">
+                    <h2 style="font-size: var(--text-2xl);">ready to start?</h2>
+                    <p>2 minutes. no credit card.</p>
+                    <a href="#" class="btn btn-primary">get started</a>
+                  </div>
+                </div>
+                <div class="footer">
+                  <div class="container footer-inner">
+                    <p style="margin:0;">© 2026 brand inc.</p>
+                    <div class="footer-links">
+                      <a href="#">imprint</a>
+                      <a href="#">privacy</a>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;footer&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="cta" style="margin-bottom: var(--space-7);"&gt;
+      &lt;h2&gt;ready to start?&lt;/h2&gt;
+      &lt;p&gt;2 minutes. no credit card.&lt;/p&gt;
+      &lt;a href="#" class="btn btn-primary"&gt;get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="footer"&gt;
+    &lt;div class="container footer-inner"&gt;
+      &lt;p&gt;© 2026&lt;/p&gt;
+      &lt;div class="footer-links"&gt;
+        &lt;a href="#"&gt;imprint&lt;/a&gt;
+        &lt;a href="#"&gt;privacy&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</pre>
+          </div>
+        </section>
+
+        <!-- ============ TOKENS ============ -->
         <section class="docs-section" id="tokens">
           <h2>design tokens</h2>
           <p>override these in your own css <strong>after</strong> the framework link.</p>
@@ -701,9 +1314,7 @@
           </div>
         </section>
 
-        <!-- =============================================
-             UTILITIES
-             ============================================= -->
+        <!-- ============ UTILITIES ============ -->
         <section class="docs-section" id="utils">
           <h2>utilities</h2>
           <p>small helpers.</p>
