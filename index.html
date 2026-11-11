@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora — Minimal CSS Framework</title>
+  <meta name="description" content="A tiny CSS framework for minimal company sites. Light-first, automatic dark mode, no build step.">
+  <link rel="stylesheet" href="./framework.css">
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">skip to content</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">nexora<span>.</span></a>
+      <button class="nav-toggle" aria-label="menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="main">
+        <a href="#install">install</a>
+        <a href="#layout">layout</a>
+        <a href="#nav">nav</a>
+        <a href="#buttons">buttons</a>
+        <a href="#cards">cards</a>
+        <a href="#forms">forms</a>
+        <a href="#faq">faq</a>
+      </nav>
+      <a href="#install" class="btn btn-primary btn-small">get started</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container docs-layout">
+
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="docs-sidebar">
+        <h4>getting started</h4>
+        <a href="#install">install</a>
+        <a href="#quickstart">quick start</a>
+
+        <h4>layout</h4>
+        <a href="#layout">container &amp; section</a>
+        <a href="#grid">grid</a>
+
+        <h4>components</h4>
+        <a href="#nav">navbar</a>
+        <a href="#hero">hero</a>
+        <a href="#buttons">buttons</a>
+        <a href="#cards">cards</a>
+        <a href="#stats">stats</a>
+        <a href="#testimonials">testimonials</a>
+        <a href="#forms">forms</a>
+        <a href="#faq">faq</a>
+        <a href="#cta">cta</a>
+        <a href="#footer">footer</a>
+
+        <h4>reference</h4>
+        <a href="#tokens">design tokens</a>
+        <a href="#utils">utilities</a>
+      </aside>
+
+      <!-- ===== CONTENT ===== -->
+      <div class="docs-content">
+
+        <!-- =============================================
+             INSTALL
+             ============================================= -->
+        <section class="docs-section" id="install">
+          <h2>install</h2>
+          <p>three ways. pick one.</p>
+
+          <div class="code">
+            <div class="code-header">
+              <span>cdn (jsdelivr)</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Xr7-Code/Nexora-Minimal-CSS-Framework@main/framework.css"&gt;</pre>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>github pages</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;link rel="stylesheet" href="https://xr7-code.github.io/Nexora-Minimal-CSS-Framework/framework.css"&gt;</pre>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>local</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;link rel="stylesheet" href="./framework.css"&gt;</pre>
+          </div>
+
+          <p>optional js for mobile nav, active links and form feedback:</p>
+          <div class="code">
+            <div class="code-header">
+              <span>nexora.js</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;script src="./nexora.js" defer&gt;&lt;/script&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             QUICK START
+             ============================================= -->
+        <section class="docs-section" id="quickstart">
+          <h2>quick start</h2>
+          <p>a full page in less than 30 lines.</p>
+
+          <div class="code">
+            <div class="code-header">
+              <span>index.html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;my site&lt;/title&gt;
+  &lt;link rel="stylesheet" href="./framework.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href="#main" class="skip-link"&gt;skip to content&lt;/a&gt;
+
+  &lt;header class="navbar"&gt;
+    &lt;div class="container nav-inner"&gt;
+      &lt;a href="/" class="logo"&gt;brand&lt;span&gt;.&lt;/span&gt;&lt;/a&gt;
+      &lt;button class="nav-toggle" aria-label="menu" aria-expanded="false"&gt;☰&lt;/button&gt;
+      &lt;nav class="nav-links" aria-label="main"&gt;
+        &lt;a href="#"&gt;features&lt;/a&gt;
+        &lt;a href="#"&gt;contact&lt;/a&gt;
+      &lt;/nav&gt;
+      &lt;a href="#" class="btn btn-primary btn-small"&gt;get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main id="main"&gt;
+    &lt;section class="hero"&gt;
+      &lt;div class="container"&gt;
+        &lt;div class="hero-content"&gt;
+          &lt;h1&gt;hello.&lt;/h1&gt;
+          &lt;p class="lead"&gt;a minimal site in 10 lines.&lt;/p&gt;
+          &lt;div class="hero-actions"&gt;
+            &lt;a href="#" class="btn btn-primary"&gt;start&lt;/a&gt;
+            &lt;a href="#" class="btn btn-outline"&gt;docs&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="footer"&gt;
+    &lt;div class="container footer-inner"&gt;
+      &lt;p&gt;© 2026&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/footer&gt;
+
+  &lt;script src="./nexora.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             LAYOUT
+             ============================================= -->
+        <section class="docs-section" id="layout">
+          <h2>container &amp; section</h2>
+          <p><code>.container</code> centers content at 1160px. <code>.section</code> adds vertical rhythm.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <section class="section" style="background: var(--color-surface); border-radius: var(--radius-md);">
+                <div class="container">
+                  <p style="text-align:center; margin:0;">.section + .container</p>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;section class="section"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             GRID
+             ============================================= -->
+        <section class="docs-section" id="grid">
+          <h2>grid</h2>
+          <p><code>.grid-2</code>, <code>.grid-3</code>, <code>.grid-4</code> — all responsive via auto-fit.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div class="grid grid-3">
+                <div class="card"><p style="margin:0;">1</p></div>
+                <div class="card"><p style="margin:0;">2</p></div>
+                <div class="card"><p style="margin:0;">3</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div class="grid grid-3"&gt;
+  &lt;div class="card"&gt;...&lt;/div&gt;
+  &lt;div class="card"&gt;...&lt;/div&gt;
+  &lt;div class="card"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             NAVBAR
+             ============================================= -->
+        <section class="docs-section" id="nav">
+          <h2>navbar</h2>
+          <p>sticky header. <code>.nav-toggle</code> only appears on mobile. needs <code>nexora.js</code>.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body" style="padding:0;">
+              <header class="navbar" style="position:relative;">
+                <div class="container nav-inner">
+                  <a href="#" class="logo">brand<span>.</span></a>
+                  <nav class="nav-links">
+                    <a href="#">features</a>
+                    <a href="#">pricing</a>
+                    <a href="#">contact</a>
+                  </nav>
+                  <a href="#" class="btn btn-primary btn-small">get started</a>
+                </div>
+              </header>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;header class="navbar"&gt;
+  &lt;div class="container nav-inner"&gt;
+    &lt;a href="/" class="logo"&gt;brand&lt;span&gt;.&lt;/span&gt;&lt;/a&gt;
+    &lt;button class="nav-toggle" aria-label="menu" aria-expanded="false"&gt;☰&lt;/button&gt;
+    &lt;nav class="nav-links" aria-label="main"&gt;
+      &lt;a href="#"&gt;features&lt;/a&gt;
+      &lt;a href="#"&gt;pricing&lt;/a&gt;
+      &lt;a href="#"&gt;contact&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;a href="#" class="btn btn-primary btn-small"&gt;get started&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             HERO
+             ============================================= -->
+        <section class="docs-section" id="hero">
+          <h2>hero</h2>
+          <p>big title, lead paragraph, action buttons.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <section class="hero" style="padding-block: var(--space-6);">
+                <div class="hero-content">
+                  <span class="eyebrow">new</span>
+                  <h1 style="font-size: var(--text-2xl); margin-block: var(--space-3);">software that <span class="text-accent">just works</span>.</h1>
+                  <p class="lead">built for teams who don't have time for complicated software.</p>
+                  <div class="hero-actions">
+                    <a href="#" class="btn btn-primary">get started</a>
+                    <a href="#" class="btn btn-outline">see demo</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;section class="hero"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="hero-content"&gt;
+      &lt;span class="eyebrow"&gt;new&lt;/span&gt;
+      &lt;h1&gt;software that &lt;span class="text-accent"&gt;just works&lt;/span&gt;.&lt;/h1&gt;
+      &lt;p class="lead"&gt;built for teams who don't have time for complicated software.&lt;/p&gt;
+      &lt;div class="hero-actions"&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;get started&lt;/a&gt;
+        &lt;a href="#" class="btn btn-outline"&gt;see demo&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             BUTTONS
+             ============================================= -->
+        <section class="docs-section" id="buttons">
+          <h2>buttons</h2>
+          <p>three variants, three sizes.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body centered">
+              <div class="flex flex-col gap-3 items-center">
+                <div class="flex gap-3">
+                  <a href="#" class="btn btn-primary">primary</a>
+                  <a href="#" class="btn btn-outline">outline</a>
+                  <a href="#" class="btn btn-ghost">ghost</a>
+                </div>
+                <div class="flex gap-3 items-center">
+                  <a href="#" class="btn btn-primary btn-small">small</a>
+                  <a href="#" class="btn btn-primary">default</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;a href="#" class="btn btn-primary"&gt;primary&lt;/a&gt;
+&lt;a href="#" class="btn btn-outline"&gt;outline&lt;/a&gt;
+&lt;a href="#" class="btn btn-ghost"&gt;ghost&lt;/a&gt;
+
+&lt;a href="#" class="btn btn-primary btn-small"&gt;small&lt;/a&gt;
+&lt;a href="#" class="btn btn-primary btn-block"&gt;block&lt;/a&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             CARDS
+             ============================================= -->
+        <section class="docs-section" id="cards">
+          <h2>cards</h2>
+          <p>feature cards with optional icon.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div class="grid grid-3">
+                <article class="card">
+                  <div class="card-icon">⚡</div>
+                  <h3>fast</h3>
+                  <p>loads in under a second.</p>
+                </article>
+                <article class="card">
+                  <div class="card-icon">🔒</div>
+                  <h3>secure</h3>
+                  <p>encrypted, gdpr compliant.</p>
+                </article>
+                <article class="card">
+                  <div class="card-icon">✨</div>
+                  <h3>clean</h3>
+                  <p>minimal by default.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;article class="card"&gt;
+  &lt;div class="card-icon"&gt;⚡&lt;/div&gt;
+  &lt;h3&gt;fast&lt;/h3&gt;
+  &lt;p&gt;loads in under a second.&lt;/p&gt;
+&lt;/article&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             STATS
+             ============================================= -->
+        <section class="docs-section" id="stats">
+          <h2>stats</h2>
+          <p>numbers that sell.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div class="stats">
+                <div>
+                  <div class="stat-value">500+</div>
+                  <div class="stat-label">customers</div>
+                </div>
+                <div>
+                  <div class="stat-value">12</div>
+                  <div class="stat-label">years</div>
+                </div>
+                <div>
+                  <div class="stat-value">99.9%</div>
+                  <div class="stat-label">uptime</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div class="stats"&gt;
+  &lt;div&gt;
+    &lt;div class="stat-value"&gt;500+&lt;/div&gt;
+    &lt;div class="stat-label"&gt;customers&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             TESTIMONIALS
+             ============================================= -->
+        <section class="docs-section" id="testimonials">
+          <h2>testimonials</h2>
+          <p>quotes with author.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div class="grid grid-2">
+                <div class="testimonial">
+                  <p class="testimonial-quote">"finally, a tool my team actually uses."</p>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar"></div>
+                    <div>
+                      <div class="testimonial-name">jane doe</div>
+                      <div class="testimonial-role">ceo, acme</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial">
+                  <p class="testimonial-quote">"shipped our site in a day."</p>
+                  <div class="testimonial-author">
+                    <div class="testimonial-avatar"></div>
+                    <div>
+                      <div class="testimonial-name">john smith</div>
+                      <div class="testimonial-role">dev, foo inc</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div class="testimonial"&gt;
+  &lt;p class="testimonial-quote"&gt;"finally, a tool my team actually uses."&lt;/p&gt;
+  &lt;div class="testimonial-author"&gt;
+    &lt;img class="testimonial-avatar" src="avatar.jpg" alt=""&gt;
+    &lt;div&gt;
+      &lt;div class="testimonial-name"&gt;jane doe&lt;/div&gt;
+      &lt;div class="testimonial-role"&gt;ceo, acme&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             FORMS
+             ============================================= -->
+        <section class="docs-section" id="forms">
+          <h2>forms</h2>
+          <p>labels, inputs, textarea, hints. add <code>data-nexora-form</code> for visual feedback.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <form class="form" data-nexora-form>
+                <div class="form-row">
+                  <div class="field">
+                    <label class="label" for="demo-name">name <span class="required">*</span></label>
+                    <input class="input" id="demo-name" type="text" required placeholder="jane doe">
+                  </div>
+                  <div class="field">
+                    <label class="label" for="demo-email">email <span class="required">*</span></label>
+                    <input class="input" id="demo-email" type="email" required placeholder="jane@acme.com">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label" for="demo-msg">message</label>
+                  <textarea class="textarea" id="demo-msg" placeholder="what's up?"></textarea>
+                  <span class="field-hint">max 500 characters.</span>
+                </div>
+                <button type="submit" class="btn btn-primary">send</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;form class="form" data-nexora-form&gt;
+  &lt;div class="form-row"&gt;
+    &lt;div class="field"&gt;
+      &lt;label class="label" for="name"&gt;name &lt;span class="required"&gt;*&lt;/span&gt;&lt;/label&gt;
+      &lt;input class="input" id="name" type="text" required&gt;
+    &lt;/div&gt;
+    &lt;div class="field"&gt;
+      &lt;label class="label" for="email"&gt;email&lt;/label&gt;
+      &lt;input class="input" id="email" type="email"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="field"&gt;
+    &lt;label class="label" for="msg"&gt;message&lt;/label&gt;
+    &lt;textarea class="textarea" id="msg"&gt;&lt;/textarea&gt;
+    &lt;span class="field-hint"&gt;optional.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;send&lt;/button&gt;
+&lt;/form&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             FAQ
+             ============================================= -->
+        <section class="docs-section" id="faq">
+          <h2>faq</h2>
+          <p>native accordion, no js needed.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div class="faq">
+                <details class="faq-item">
+                  <summary>how long does setup take?</summary>
+                  <p>less than 5 minutes.</p>
+                </details>
+                <details class="faq-item">
+                  <summary>can i cancel anytime?</summary>
+                  <p>yes, monthly, no strings.</p>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div class="faq"&gt;
+  &lt;details class="faq-item"&gt;
+    &lt;summary&gt;how long does setup take?&lt;/summary&gt;
+    &lt;p&gt;less than 5 minutes.&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             CTA
+             ============================================= -->
+        <section class="docs-section" id="cta">
+          <h2>cta</h2>
+          <p>the closer.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body">
+              <div class="cta">
+                <h2>ready?</h2>
+                <p>start in 2 minutes. no credit card.</p>
+                <a href="#" class="btn btn-primary">get started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;div class="cta"&gt;
+  &lt;h2&gt;ready?&lt;/h2&gt;
+  &lt;p&gt;start in 2 minutes. no credit card.&lt;/p&gt;
+  &lt;a href="#" class="btn btn-primary"&gt;get started&lt;/a&gt;
+&lt;/div&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             FOOTER
+             ============================================= -->
+        <section class="docs-section" id="footer">
+          <h2>footer</h2>
+          <p>simple, single-row footer.</p>
+
+          <div class="preview">
+            <div class="preview-header"><span>preview</span></div>
+            <div class="preview-body" style="padding:0;">
+              <footer class="footer" style="border-top:0;">
+                <div class="container footer-inner">
+                  <p style="margin:0;">© 2026</p>
+                  <div class="footer-links">
+                    <a href="#">imprint</a>
+                    <a href="#">privacy</a>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-header">
+              <span>html</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>&lt;footer class="footer"&gt;
+  &lt;div class="container footer-inner"&gt;
+    &lt;p&gt;© 2026&lt;/p&gt;
+    &lt;div class="footer-links"&gt;
+      &lt;a href="#"&gt;imprint&lt;/a&gt;
+      &lt;a href="#"&gt;privacy&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             TOKENS
+             ============================================= -->
+        <section class="docs-section" id="tokens">
+          <h2>design tokens</h2>
+          <p>override these in your own css <strong>after</strong> the framework link.</p>
+
+          <table class="token-table">
+            <thead>
+              <tr><th>token</th><th>default</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>--color-bg</code></td><td><span class="swatch" style="background:#ffffff;"></span>#ffffff</td></tr>
+              <tr><td><code>--color-text</code></td><td><span class="swatch" style="background:#171717;"></span>#171717</td></tr>
+              <tr><td><code>--color-muted</code></td><td><span class="swatch" style="background:#737373;"></span>#737373</td></tr>
+              <tr><td><code>--color-border</code></td><td><span class="swatch" style="background:#e8e8e8;"></span>#e8e8e8</td></tr>
+              <tr><td><code>--color-primary</code></td><td><span class="swatch" style="background:#513477;"></span>#513477</td></tr>
+              <tr><td><code>--color-primary-hover</code></td><td><span class="swatch" style="background:#684694;"></span>#684694</td></tr>
+              <tr><td><code>--color-primary-soft</code></td><td><span class="swatch" style="background:#f1ebf7;"></span>#f1ebf7</td></tr>
+              <tr><td><code>--container-width</code></td><td>1160px</td></tr>
+              <tr><td><code>--radius-sm / md / lg / xl</code></td><td>8 / 14 / 22 / 30px</td></tr>
+            </tbody>
+          </table>
+
+          <div class="code">
+            <div class="code-header">
+              <span>custom theme</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>:root {
+  --color-primary: #0066ff;
+  --color-primary-hover: #0052cc;
+  --color-primary-soft: #e6f0ff;
+  --container-width: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #66a3ff;
+    --color-on-primary: #000;
+  }
+}</pre>
+          </div>
+        </section>
+
+        <!-- =============================================
+             UTILITIES
+             ============================================= -->
+        <section class="docs-section" id="utils">
+          <h2>utilities</h2>
+          <p>small helpers.</p>
+
+          <div class="code">
+            <div class="code-header">
+              <span>classes</span>
+              <button class="copy-btn">copy</button>
+            </div>
+            <pre>.text-muted      .text-accent     .text-center
+.flex            .flex-col        .items-center
+.justify-between .gap-2 .gap-3    .gap-4
+.mt-0 .mt-4 .mt-6 .mb-4 .mb-6
+.hidden          .sr-only         .divider</pre>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="margin-top: var(--space-9);">
+    <div class="container footer-inner">
+      <p>nexora · mit license · 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/Xr7-Code/Nexora-Minimal-CSS-Framework">github</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./nexora.js" defer></script>
+  <script src="./docs.js" defer></script>
+</body>
+</html>
